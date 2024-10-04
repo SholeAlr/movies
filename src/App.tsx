@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { RoutesConfig } from './routes/RoutesConfig'
+import './styles/normalize.css'
 
 function App() {
   return (
