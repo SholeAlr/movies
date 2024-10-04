@@ -11,7 +11,8 @@ export const AppLayout = () => {
         isSidebarOpen={isSidebarOpen}
         setIsSidebarOpen={setIsSidebarOpen}
       />
-      <Sidebar />
+      {isSidebarOpen ? <Sidebar /> : null}
+
       <Main />
     </div>
   )

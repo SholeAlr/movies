@@ -1,5 +1,7 @@
+import { UserOctagon, VideoOctagon } from 'iconsax-react'
 import { AppLayout } from '../layout/AppLayout'
-import { Actors } from '../pages/actors/Actors'
+import { Artists } from '../pages/artists/Artists'
+
 import { Movies } from '../pages/movies/Movies'
 
 export const RoutesConfig = [
@@ -7,10 +9,14 @@ export const RoutesConfig = [
     layout: <AppLayout />,
     path: '/movies',
     element: <Movies />,
+    title: 'Movies',
+    icon: VideoOctagon,
   },
   {
     layout: <AppLayout />,
-    path: '/actors',
-    element: <Actors />,
+    path: '/artists',
+    element: <Artists />,
+    title: 'Artists',
+    icon: UserOctagon,
   },
 ]
