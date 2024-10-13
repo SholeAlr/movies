@@ -12,6 +12,8 @@
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",
     "axios": "^1.7.7",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.11.8",
     "iconsax-react": "^0.0.8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

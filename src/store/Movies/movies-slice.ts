@@ -23,9 +23,7 @@ const movieSlice = createSlice({
       .addCase(
         getMoviesList.fulfilled,
         (state, { payload }: PayloadAction<MoviesListResponse>) => {
-          const newData = {
-            ...payload,
-          }
+          const newData = [...payload]
 
           state.movies.moviesLoading = false
           state.movies.moviesList = newData

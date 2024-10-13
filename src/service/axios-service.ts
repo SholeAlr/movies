@@ -39,7 +39,6 @@ class AxiosService {
         return response
       },
       (error: AxiosError) => {
-        console.log(error)
         return Promise.reject(error)
       },
     )
