@@ -7,8 +7,8 @@ export const Movies = () => {
 
   const dispatch = useAppDispatch()
   useEffect(() => {
-    console.log(moviesList)
     dispatch(getMoviesList())
   }, [])
+  console.log(moviesList)
   return <div>Movies</div>
 }

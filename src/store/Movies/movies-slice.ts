@@ -23,18 +23,8 @@ const movieSlice = createSlice({
       .addCase(
         getMoviesList.fulfilled,
         (state, { payload }: PayloadAction<MoviesListResponse>) => {
-          let flagDataResponse = true
-          if (payload.queryResult.length === 0) flagDataResponse = false
-
-          const queryResult = [
-            ...(state.movies.moviesList?.queryResult as []),
-            ...payload.queryResult,
-          ]
-
           const newData = {
             ...payload,
-            queryResult,
-            flagDataResponse,
           }
 
           state.movies.moviesLoading = false

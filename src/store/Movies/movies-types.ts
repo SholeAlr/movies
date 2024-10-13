@@ -1,5 +1,4 @@
 import { Artist } from '../../@types/global.type'
-import { GeneralResponse } from '../@types/general-response.type'
 
 export type MovieItemResponse = {
   id: number
@@ -9,9 +8,7 @@ export type MovieItemResponse = {
   actors: Artist[]
 }
 
-export type MoviesListResponse = GeneralResponse & {
-  queryResult: MovieItemResponse[]
-}
+export type MoviesListResponse = MovieItemResponse[]
 
 export type MoviesInitialState = {
   movies: {
