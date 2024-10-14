@@ -28,7 +28,7 @@ export const Movies = () => {
   return (
     <>
       <div className='text-white h-full overflow-y-scroll pb-10'>
-        {!moviesLoading && moviesList.length ? (
+        {!moviesLoading && moviesList?.length ? (
           <div className='flex flex-col gap-4 sm:grid sm:grid-cols-2 lg:grid-cols-3'>
             {moviesList.map((eachMovie) => (
               <div

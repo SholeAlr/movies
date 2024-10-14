@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { MoviesListResponse } from './movies-types'
+import { MovieItemResponse, MoviesListResponse } from './movies-types'
 import { AppApi } from '../../service/api'
 import { MoviesUrls } from './movies-url'
 
@@ -25,12 +25,13 @@ export const getMoviesList = createAsyncThunk<MoviesListResponse>(
 )
 
 // Get movie by id
-export const getMoviesDetail = createAsyncThunk<
-  MoviesListResponse,
-  { data: any }
->('/api/movies/:id/', async ({ data }, { rejectWithValue }) => {
+export const getMoviesDetailById = createAsyncThunk<
+  void,
+  { data: any; movieId: number }
+>('/api/movies/:movieId', async ({ data, movieId }, { rejectWithValue }) => {
   try {
-    const response = await AppApi.post(MoviesUrls.GetMoviesDetail, data)
+    const url = `${MoviesUrls.GetMoviesDetail}/${movieId}`
+    const response = await AppApi.post(url, data)
       .then((res: any) => {
         if (res.status === 200) {
           return res.data

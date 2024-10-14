@@ -15,4 +15,8 @@ export type MoviesInitialState = {
     moviesLoading: boolean
     moviesList?: MoviesListResponse
   }
+  movieDetail: {
+    movieDetailLoading: boolean
+    movieDetailData?: MovieItemResponse
+  }
 }

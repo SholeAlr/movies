@@ -1,6 +1,6 @@
 import { MoviesListResponse } from './movies-types'
 
-export const initMoviesListData: MoviesListResponse = [
+export const initMoviesListData: any = [
   {
     id: 0,
     title: 'movie1',
@@ -26,5 +26,9 @@ export const initialState = {
   movies: {
     moviesLoading: false,
     moviesList: initMoviesListData,
+  },
+  movieDetail: {
+    movieDetailLoading: false,
+    movieDetailData: initMoviesListData,
   },
 }
